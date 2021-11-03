@@ -8,6 +8,8 @@ body {
   color: #39a6b2;
   font-family: Helvetica, Arial, sans-serif;
 }
+
+
 /* HEADER / NAV BAR STYLES START */
 
 header {
@@ -16,15 +18,11 @@ header {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  /* to support Safari User */
-  /* always put prefixed versions before the finalized version */
-  position: -webkit-sticky;
   position: sticky;
+  position: -webkit-sticky;
   top: 0;
-  /* fixed background attachment and position, also connecting the header to the .hero form */
   background-image: url("../images/hero-bg.jpg");
   background-size: cover;
-  background-position: center;
   background-attachment: fixed;
   background-position: 80%;
 }
@@ -51,15 +49,17 @@ header nav ul {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  list-style: none;  
+  list-style: none;
 }
 
 header nav ul li a {
-  margin: 0 30px;
+  padding: 10px 15px;
   font-weight: lighter;
   font-size: 1.55vw;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  /* change color when hover over */
+}
+
+header nav ul li a:hover {
   background: #fce138;
   color: #024e76;
   border-radius: 15px;
@@ -105,11 +105,10 @@ section {
 .hero {
   background-image: url('../images/hero-bg.jpg');
   background-size: cover;
-  background-position: center;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  /* fixed background attachment and position */
+  align-items: flex-start;
   background-attachment: fixed;
   background-position: 80%;
 }
@@ -132,19 +131,17 @@ section {
 
 .hero-form {
   border: 3px solid #024e76;
-  background-color: #fce138;
+  background-color: rgba(255, 225, 56, 0.8);
   padding: 20px;
   color: #024e76;
   width: 40%;
   margin: 3.5%;
-  /* creating shadow on the boxes */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  /* rounded corners */
   border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-/* create the Hover */
+
 .hero-form button:hover {
-  background-color: #39a6b2;
+  background-color: #39a6b2;  
 }
 
 .hero-form h3 {
@@ -164,13 +161,14 @@ section {
   width: 100%;
   margin-bottom: 15px; 
   border-radius: 10px;
-  background-color: rgba(255,255,255,0.75);
+  background-color: rgba(255,255,255, 0.75);
 }
 
 .form-input:focus {
-  background-color: rgba(255,255,255,1);
+  background-color: rgba(255,255,255, 1);
   outline: none;
 }
+
 .hero-form label {
   margin: 0 5px;
 }
@@ -228,11 +226,11 @@ section {
   margin: 50px auto;
   padding-bottom: 50px;
   width: 80%;
+  border-bottom: 1px solid #39a6b2;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #39a6b2;
 }
 
 .step:last-child {
@@ -275,7 +273,6 @@ section {
   line-height: 1.5;
   color: #024e76;
 }
-
 /* WHAT YOU DO STYLES END */
 
 /* MEET THE TRAINERS START */
@@ -368,6 +365,12 @@ section {
   margin-bottom: 15px;
   margin-top: 5px;
   border-radius: 10px;
+  background-color: rgba(255,255,255, 0.75);
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+  background-color: rgba(255,255,255, 1);
+  outline: none;
 }
 
 .contact-form button {
@@ -380,16 +383,15 @@ section {
   font-size: 16px;
   border-radius: 10px;
 }
-/* create the Hover */
-.contract-form button:hover {
+
+.contact-form button:hover {
   color: #fce138;
   background: #39a6b2;
 }
+
 .contact-info a {
   color: #fce138;
 }
-
-
 /* REACH OUT STYLES END */
 
 /* UTILITIES */
@@ -410,6 +412,7 @@ section {
   header {
     padding-bottom: 0;
     justify-content: center;
+    position: relative;
   }
 
   header h1 {
@@ -480,6 +483,10 @@ section {
   .step-text {
     flex: 100%;  
   }
+
+  .trainer-bio h3, .trainer-bio h4 {
+    display: block;
+  }
 }
 
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
@@ -511,19 +518,4 @@ section {
   .contact-form {
     order: 3;
   }
-
-  .header {
-    position: relative;
-  }
-
-  .contact-form input, .contact-form textarea {
-    /* add a transparent background here */
-  }
-  
-  /* create a new css rule for focus state */
-  .contact-form input:focus, .contact-form textarea:focus {
-  
-  }
 }
-
-
