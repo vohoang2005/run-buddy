@@ -108,13 +108,9 @@ section {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-<<<<<<< HEAD
-  align-items: flex-start
-=======
   align-items: flex-start;
   background-attachment: fixed;
   background-position: 80%;
->>>>>>> 561c09b4233f86a0c482c20e3b7ae09b111e9d6a
 }
 
 .hero-cta {
@@ -523,3 +519,16 @@ section {
     order: 3;
   }
 }
+© 2021 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Loading complete
